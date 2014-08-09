@@ -23,7 +23,7 @@ class ServiceDiscovery:
         self.package = base_path[3:]
         
     def get_services(self):    	
-    	return self.zk.get(self.base_path + "/")
+    	return self.zk.get_children(self.base_path + "/")
 
     def register(self, service_name, address, port):
         """
