@@ -6,6 +6,8 @@ Python library to interact with other microservices at http://microhackaton.gith
 Installation
 ++++++++++++
 
+You can get it from https://pypi.python.org/pypi/microhackaton-service-discovery-py
+
 .. code-block:: bash
 
   $ pip install microhackaton-service-discovery-py
