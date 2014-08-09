@@ -21,6 +21,9 @@ class ServiceDiscovery:
         self.zk.start()
         self.base_path = base_path
         self.package = base_path[3:]
+        
+    def get_services(self):    	
+    	return self.zk.get(self.base_path + "/")
 
     def register(self, service_name, address, port):
         """
