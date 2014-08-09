@@ -7,7 +7,7 @@ from setuptools import setup
 
 setup(
     name='microhackaton-service-discovery-py',
-    version='0.0.5',
+    version='0.0.6',
     description='A python package that works to provide service registration and discovery for http://microhackaton.github.io/2014/',
     author="Kamil Chmielewski",
     author_email='kamil.chm@gmail.com',
