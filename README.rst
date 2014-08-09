@@ -39,4 +39,4 @@ How to find random service instance?
 
 .. code-block:: python
 
-  url_as_str = sd.get_instances('blog-collector')
+  url_as_str = sd.get_instance('blog-collector')
