@@ -5,8 +5,14 @@ import json
 import random
 import time
 import uuid
+import sys
 from kazoo.client import KazooClient
 
+def b(data):
+    if sys.version < '3':
+        return data
+    else:
+        return bytes(data, 'utf-8')
 
 class ServiceDiscovery:
 
@@ -30,7 +36,7 @@ class ServiceDiscovery:
             str(int(time.time() * 1000)))
         self.zk.ensure_path(self.base_path + "/" + service_name)
         self.zk.create(self.base_path + "/" + service_name + "/" + instance_id,
-                    service_definition, ephemeral=True)
+                    b(service_definition), ephemeral=True)
         return instance_id
 
     def _generate_unique_service_id(self):
